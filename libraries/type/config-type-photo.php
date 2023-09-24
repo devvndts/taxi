@@ -26,9 +26,9 @@ $nametype = "logo";
 $config['photo']['photo_static'][$nametype]['title_main'] = "Logo";
 $config['photo']['photo_static'][$nametype]['check'] = array("hienthi" => "Hiển thị");
 $config['photo']['photo_static'][$nametype]['images'] = true;
-$config['photo']['photo_static'][$nametype]['width'] = 250;
-$config['photo']['photo_static'][$nametype]['height'] = 50;
-$config['photo']['photo_static'][$nametype]['thumb'] = '250x50x2';
+$config['photo']['photo_static'][$nametype]['width'] = 386;
+$config['photo']['photo_static'][$nametype]['height'] = 88;
+$config['photo']['photo_static'][$nametype]['thumb'] = '386x88x2';
 $config['photo']['photo_static'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif';
 $config['photo']['photo_static'][$nametype]['css_hinh'] = '';//background:#000;padding:10px;
 

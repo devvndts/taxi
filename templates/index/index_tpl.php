@@ -1,3 +1,59 @@
+<div class="criteria__container">
+    <div class="criteria__list">
+        <?php 
+            foreach ($criteria as $v) {?>
+                <div class="criteria__item">
+                     <div class="criteria__item__left">
+                        <div class="criteria__item__left-image">
+                            <?= $func->getImage(['class' => 'lazy', 'sizes' => '28x28x3', 'upload' => UPLOAD_NEWS_L, 'image' => $v['photo'], 'alt' => $v['name' . $lang]]) ?>
+                        </div>
+                    </div>
+                    <div class="criteria__item__right">
+                        <h3 class="criteria__item__right-title"><?=$v['name'.$lang]?></h3>
+                        <p class="criteria__item__right-desc"><?=$v['desc'.$lang]?></p>
+                    </div>
+                </div>
+            <?php }
+        ?>
+    </div>       
+</div>
+
+<div class="whychoose__container">
+    <?= $func->getImage(['class' => 'lazy', 'sizes' => '1920x580x1', 'upload' => UPLOAD_NEWS_L, 'image' => $whychoose['photo'], 'alt' => $whychoose['name' . $lang]]) ?>
+    <div class="whychoose__wrapper wrap-content">
+        <div class="whychoose__content">
+            <h3 class="whychoose__content__title"><?=$whychoose['name'.$lang]?></h3>
+            <p class="whychoose__content__desc">
+                <?=$whychoose['desc'.$lang]?>
+            </p>
+            <a href="" class="whychoose__content__btn">Tìm hiểu thêm</a>
+        </div>
+    </div>
+</div>
+
+<div class="our__info__container">
+    <div class="wrap-content">
+        <div class="our__info__wrapper">
+            <h3 class="our__info__title"><?=$ourInfo['name'.$lang]?></h3>
+            <p class="our__info__desc">
+                <?=$ourInfo['desc'.$lang]?>
+            </p>
+            <div class="our__info__contact">
+                <div class="our__info__contact-left">
+                    <a href="">Hotline: <?=$optsetting['hotline']?></a>
+                </div>
+                <div class="our__info__contact-right">
+                    <ul class="social">
+                    <?php for($i=0;$i<count($social);$i++) { ?>
+                        <li><a href="<?=$social[$i]['link']?>" target="_blank"><img src="<?=UPLOAD_PHOTO_L.$social[$i]['photo']?>" alt="<?=$social[$i]['name'.$lang]?>" width="85" height="85"></a></li>
+                    <?php } ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Sản phẩm nổi bật -->
 <div class="wrap-product wrap-content">
     <div class="title-main"><span>Sản phẩm nổi bật</span></div>

@@ -13,8 +13,15 @@ $slider = $cache->get("select name$lang, photo, link from #_photo where type = ?
 $splistmenu = $cache->get("select name$lang, slugvi, slugen, id from #_product_list where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('san-pham'), 'result', 7200);
 
 $newsnb = $cache->get("select name$lang, slugvi, slugen, desc$lang, date_created, id, photo from #_news where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc", array('tin-tuc'), 'result', 7200);
+$criteria = $cache->get("select name$lang, slugvi, slugen, desc$lang, date_created, id, photo from #_news where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc", array('tieu-chi'), 'result', 7200);
 
 $videonb = $cache->get("select id from #_photo where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status)", array('video'), 'result', 7200);
+
+
+$whychoose = $d->rawQueryOne("select id, type, name$lang,desc$lang, photo, date_created, date_updated, options from #_static where type = ? limit 0,1", array('tai-sao-choose'));
+
+$ourInfo = $d->rawQueryOne("select id, type, name$lang,desc$lang, date_created, date_updated, options from #_static where type = ? limit 0,1", array('our-info'));
+
 
 // $partner = $cache->get("select name$lang, link, photo from #_photo where type = ? and find_in_set('hienthi',status) order by numb, id desc", array('doitac'), 'result', 7200);
 
